@@ -24,7 +24,7 @@ class PostView(ListView):
         data ['tag'] = TagModel.objects.all()
         return data 
 
-class BlogDetailView(DetailView):
+class PostDetailView(DetailView):
     model = BlogPostModel
     template_name = 'blog-details.html'
 
