@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-def custom_404(request, exception):
+def error_404(request, exception):
     return render(request, 'errors/404.html', {})
 
 

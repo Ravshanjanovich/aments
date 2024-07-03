@@ -31,10 +31,13 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     'blog',
+    'errors',
+
 ]
 
 THIRD_PART_APPS = [
-    'crispy_forms'
+    'crispy_forms',
+    
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PART_APPS
