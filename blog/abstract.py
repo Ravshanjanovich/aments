@@ -19,7 +19,7 @@ class ActiveModel(models.Model):
         abstract = True
 
 class OrderModel(models.Model):
-    order = models.IntegerField()
+    order = models.PositiveIntegerField(default=0)
 
 
     class Meta:
