@@ -26,21 +26,6 @@ class AuthorModel(BaseModel):
         verbose_name_plural = _("Authors")
 
 
-class CaptionModel(models.Model):
-    caption = models.CharField(
-        max_length=70,  
-        help_text='you write a title', 
-        verbose_name=_('caption'))
-
-    def __str__(self):
-        return self.caption
-
-    class Meta:
-        db_table = 'Caption'
-        verbose_name = _('Caption')
-        verbose_name_plural = _('Captions')
-
-
 
 class BlogPostModel(BaseModel, OrderModel):
     title =  models.CharField(
@@ -67,11 +52,7 @@ class BlogPostModel(BaseModel, OrderModel):
         'TagModel', 
         related_name='blogpost', 
         verbose_name=_('tags'))  
-    caption = models.OneToOneField(
-        CaptionModel, 
-        on_delete=models.CASCADE, 
-        related_name='blogpost', 
-        verbose_name=_('caption'))      
+         
 
 
     def __str__(self):

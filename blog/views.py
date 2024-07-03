@@ -37,7 +37,7 @@ class CommentView(CreateView):
         form.instance.post = get_object_or_404(Post, pk=self.kwargs.get("pk"))
         return super().form_valid(form)
     def get_success_url(self):
-        return reverse("blogs:detail", kwargs={'pk':self.kwargs.get("pk")})
+        return reverse("blog:detail", kwargs={'pk':self.kwargs.get("pk")})
 
     def get_queryset(self):
         return CommentModel.objects.all()

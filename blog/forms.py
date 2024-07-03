@@ -1,8 +1,7 @@
 from django import forms
 from .models import CommentModel
 
-
 class CommentForm(forms.ModelForm):
     class Meta:
         model = CommentModel
-        exlude = ['review','created_at',]
+        exclude = ['review', 'created_at']
