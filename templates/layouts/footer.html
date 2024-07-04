@@ -1,3 +1,4 @@
+ {% load static %}
  <!-- ...:::: Start Footer Section:::... -->
  <footer class="footer-section section-top-gap-100">
     <!-- Start Footer Top Area -->
@@ -7,17 +8,17 @@
                 <div class="col-lg-3 col-md-3 col-sm-5">
                     <div class="footer-widget footer-widget-contact" data-aos="fade-up"  data-aos-delay="0">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="" class="img-fluid"></a>
+                            <a href="index.html"><img src="{% static 'assets/images/logo/logo.png' %}" alt="" class="img-fluid"></a>
                         </div>
                         <div class="footer-contact">
-                            <p>We are a team of designers and developers that create high quality Magento, Prestashop, Opencart...</p>
+                            <p> We are a team of designers and developers that create high quality Magento, Prestashop, Opencart...</p>
                             <div class="customer-support">
                                 <div class="customer-support-icon">
-                                    <img src="assets/images/icon/support-icon.png" alt="">
+                                    <img src="{% static 'assets/images/icon/support-icon.png' %}" alt="">
                                 </div>
                                 <div class="customer-support-text">
                                     <span>Customer Support</span>
-                                    <a class="customer-support-text-phone" href="tel:(08)123456789">(08) 123 456 789</a>
+                                    <a class="customer-support-text-phone" href="tel:(08)123456789">(90) 107 09 07</a>
                                 </div>
                             </div>
                         </div>
@@ -70,12 +71,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="copyright-area">
-                        <p class="copyright-area-text">Copyright &copy; 2022 <a class="copyright-link" href="https://hasthemes.com/">Hasthemes</a></p>
+                        <p class="copyright-area-text">Copyright &copy; 2024 <a class="copyright-link" href="https://hasthemes.com/">Hasthemes</a></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="footer-payment">
-                        <a href=""><img class="img-fluid" src="assets/images/icon/payment-icon.png" alt=""></a>
+                        <a href=""><img class="img-fluid" src="{% static 'assets/images/icon/payment-icon.png' %}" alt=""></a>
                     </div>
                 </div>
             </div>

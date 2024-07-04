@@ -108,13 +108,25 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
+LANGUAGE_CODE = 'uz'
+LANGUAGES = [
+    ('uz', 'Uzbek'),
+    ('en', 'English'),
+]
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 
 # Static files (CSS, JavaScript, Images)
@@ -123,7 +135,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'assets/']
+    BASE_DIR / 'staticfiles/']
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media/'

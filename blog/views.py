@@ -4,11 +4,14 @@ from .models import AuthorModel, BlogPostModel, CommentModel, TagModel
 from django.views.generic import  ListView, DetailView, CreateView
 from blog.forms import CommentForm
 from django.urls import reverse
+from django.core.paginator import Paginator
 
 
 
 class PostView(ListView):
-    template_name = 'blog.html'
+    template_name = 'blogs/blog.html'
+    context_object_name = 'posts'
+    paginate_by = 10 
 
 
     def get_queryset(self):
@@ -24,9 +27,14 @@ class PostView(ListView):
         data ['tag'] = TagModel.objects.all()
         return data 
 
+
+    def blog_list(request):
+        posts = BlogPostModel.objects.all()
+        return render(request, 'blog/blogpostmodel_list.html', {'posts': posts})
+
 class PostDetailView(DetailView):
     model = BlogPostModel
-    template_name = 'blog-details.html'
+    template_name = 'blogs/blog-details.html'
 
 
 class CommentView(CreateView):
